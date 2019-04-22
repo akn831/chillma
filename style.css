@@ -1,0 +1,297 @@
+body{
+    display: grid;
+    grid-template: 
+    "header header" 500px
+    "side main" 800px
+    "main1 main1" 500px
+    "footer footer" 400px
+    / 1fr 700px;
+}
+
+header{
+    background-image: url(img/chillma.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-area: header;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.menu ul li{
+        padding: 10px 10px 10px; 
+}
+
+.menu ul li:hover{
+    background-color: blue; 
+}
+
+.text{
+    text-align: center;
+}
+
+.text img{
+    height: 400px;
+    width: 150px;
+    margin-top: 30px;
+}
+
+
+aside{
+    grid-area: main;
+}
+
+.chillma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+h2{
+    padding: 40px;
+    font-size: 60px;
+    font-family: "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", osaka, sans-serif;
+}
+
+.content{
+    text-align: center;
+    /* margin: 40px; 30px; */
+}
+
+
+main{
+    grid-area: side;
+}
+
+.room{
+    background-image: url(img/roomback.jpg); 
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    text-align: center;
+    padding: 80px;
+}
+
+h3{
+    padding: 40px;
+    font-size: 60px;
+    font-family:  "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", osaka, sans-serif;
+}
+
+.view{
+    margin: auto;
+    position: relative;
+    margin-top: 20px; 
+}
+
+.view img{
+    width: 50%;
+    height: 350px;
+    animation-name: view;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.view .img1{
+    display: block;
+    margin: 0 auto;
+}
+
+.view .img2{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    animation-delay: 5s;
+}
+
+.view .img3{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    animation-delay: 10s;
+}
+
+.view .img4{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    animation-delay: 15s;
+}
+
+.view .img5{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    animation-delay: 20s;
+}
+
+.view .img6{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    animation-delay: 25s;
+}
+
+.view .img7{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    animation-delay: 30s;
+}
+
+main1{
+    grid-area: main1;
+}
+
+.title{
+    text-align: center;
+}
+
+h4{
+    padding: 40px;
+    font-size: 60px;
+    font-family:  "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", osaka, sans-serif;
+}
+
+.card-group{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    height: 250px;
+    padding: 40px;
+    background-color: aquamarine;
+}
+
+.card img{
+    width: 100%;
+    height: 80%;
+}
+
+footer{
+    grid-area: footer;
+}
+
+h5{
+    padding: 40px;
+    font-size: 60px;
+    font-family:  "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", osaka, sans-serif;
+}
+
+.map{
+    align-items: center;
+    text-align: center;
+}
+
+.foot{
+    margin-top: 80px;
+    background-color: brown;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot img{
+    margin-left: 80px;
+    height: 50px;
+}
+
+.name{
+    margin-right: 80px;
+}
+
+@keyframes view{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .card-group{    
+        justify-content: space-around;
+    }
+
+    body{
+        grid-template: 
+        "header" 500px
+        "side" 600px
+        "main" 600px
+        "main1" 600px
+        "footer" 400px
+        / 1fr
+    }
+
+    main1{
+        margin-top: auto;
+        background-color: aquamarine;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    body{
+        grid-template: 
+        "header" 500px
+        "side" 600px
+        "main" 600px
+        "main1" 1000px
+        "footer" 400px
+        / 1fr
+    }
+
+    .menu ul li{
+        font-size: 10px;
+    }
+
+    .room{
+        padding: 0 10px 50px;
+    }
+
+    .view img{
+        height: 300px;
+    }
+
+    h4{
+        padding: 40px 0 20px;
+        font-size: 40px;
+        background-color: aquamarine;
+    }
+
+    .card-group{    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h5{
+        padding: 100px 0 30px;
+    }
+}
